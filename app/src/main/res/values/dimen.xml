@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 头部标题栏高度 -->
+    <dimen name="top_title_height">44dp</dimen>
+    <!-- 主界面底部tab高度 -->
+    <dimen name="main_tab_height">53dp</dimen>
+    <dimen name="title_max_width">200dp</dimen>
+    <dimen name="title_image_width">20dp</dimen>
+    <dimen name="menu_bottom_height">50dp</dimen>
+    <dimen name="image_text_drawable_padding">2dp</dimen>
+
+    <!-- 字体大小 -->
+    <dimen name="font_larger">20sp</dimen>
+    <dimen name="font_large">18sp</dimen>
+    <dimen name="font_button">16sp</dimen>
+    <dimen name="font_normal">15sp</dimen>
+    <dimen name="font_search">14sp</dimen>
+    <dimen name="font_value">13sp</dimen>
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_tiny">10sp</dimen>
+    <dimen name="font_tab">11sp</dimen>
+
+    <!-- 控件之间的距离 -->
+    <dimen name="spacing_super_huge">60dp</dimen>
+    <dimen name="spacing_huge">40dp</dimen>
+    <dimen name="spacing_large">20dp</dimen>
+    <dimen name="spacing_normal">15dp</dimen>
+    <dimen name="spacing_small">10dp</dimen>
+    <dimen name="spacing_tiny">4dp</dimen>
+    <dimen name="divider_height">0.5dp</dimen>
+    <dimen name="spacing_line">3dp</dimen>
+    <dimen name="spacing_layout_padding">10dp</dimen>
+    <dimen name="spacing_layout_margin">10dp</dimen>
+
+    <!-- 描述性文字item项的高 -->
+    <dimen name="text_item_height">43dp</dimen>
+    <!-- EditText的item项的高 -->
+    <dimen name="edit_item_height">43dp</dimen>
+</resources>
