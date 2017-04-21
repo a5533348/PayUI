@@ -3,8 +3,9 @@ package cn.xdeveloper.payui;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements PayFragment.PayCallBackListener{
+public class MainActivity extends AppCompatActivity implements PayPwdView.InputCallBack {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +22,9 @@ public class MainActivity extends AppCompatActivity implements PayFragment.PayCa
         });
     }
 
-    @Override
-    public void onSuccess(String pwd) {
 
+    @Override
+    public void onInputFinish(String result) {
+        Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
     }
 }

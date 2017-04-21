@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.view.Gravity;
 import android.view.View;
@@ -18,15 +17,8 @@ import android.view.WindowManager;
 
 public class PayFragment extends DialogFragment implements View.OnClickListener {
 
-    private PayCallBackListener mPayCallBackListener;
-
     private PayPwdView psw_input;
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
+    private PayPwdView.InputCallBack inputCallBack;
 
     @NonNull
     @Override
@@ -55,13 +47,7 @@ public class PayFragment extends DialogFragment implements View.OnClickListener 
         psw_input = (PayPwdView) dialog.findViewById(R.id.psw_input);
         PwdInputMethodView inputMethodView = (PwdInputMethodView) dialog.findViewById(R.id.inputView);
         psw_input.setInputMethodView(inputMethodView);
-        psw_input.setInputCallBack(new PayPwdView.InputCallBack() {
-            @Override
-            public void onInputFinish(String result) {
-
-
-            }
-        });
+        psw_input.setInputCallBack(inputCallBack);
 
     }
 
@@ -71,12 +57,8 @@ public class PayFragment extends DialogFragment implements View.OnClickListener 
 
     }
 
-    public void setPaySuccessCallBack(PayCallBackListener listener) {
-        this.mPayCallBackListener = listener;
+    public void setPaySuccessCallBack(PayPwdView.InputCallBack inputCallBack) {
+        this.inputCallBack = inputCallBack;
     }
 
-    public interface PayCallBackListener {
-
-        void onSuccess(String pwd);
-    }
 }
