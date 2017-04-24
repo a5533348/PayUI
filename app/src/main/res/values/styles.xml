@@ -29,42 +29,6 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
-    <!-- 黑色偏小的文字 -->
-    <style name="style_black_small_text">
-        <item name="android:textColor">@color/black_text</item>
-        <item name="android:textSize">@dimen/font_small</item>
-        <item name="android:includeFontPadding">false</item>
-    </style>
-
-    <!-- 灰色正常大小的文字 -->
-    <style name="style_gray_normal_text">
-        <item name="android:textColor">@color/gray_text</item>
-        <item name="android:textSize">@dimen/font_normal</item>
-        <item name="android:paddingRight">@dimen/spacing_tiny</item>
-        <item name="android:includeFontPadding">false</item>
-    </style>
-
-    <!-- 灰色很小的文字 -->
-    <style name="style_gray_tiny_text">
-        <item name="android:textColor">@color/gray_text</item>
-        <item name="android:textSize">@dimen/font_small</item>
-        <item name="android:includeFontPadding">false</item>
-    </style>
-
-    <!-- 灰色偏小的文字 -->
-    <style name="style_gray_small_text">
-        <item name="android:textColor">@color/gray_text</item>
-        <item name="android:textSize">@dimen/font_small</item>
-        <item name="android:includeFontPadding">false</item>
-    </style>
-
-    <!-- 白色正常大小的文字 -->
-    <style name="style_white_normal_text">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/font_normal</item>
-        <item name="android:includeFontPadding">false</item>
-    </style>
-
     <!-- 分割线 -->
     <style name="style_separate_line">
         <item name="android:layout_width">match_parent</item>
@@ -87,7 +51,8 @@
     </style>
 
 
-    <style name="btn_input_amount_style">
+    <!--键盘数字-->
+    <style name="btn_input_num_style">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>
@@ -95,7 +60,6 @@
         <item name="android:textSize">25sp</item>
         <item name="android:textColor">@color/black_text</item>
         <item name="android:background">@drawable/selector_item_pressed</item>
-
     </style>
 
 </resources>

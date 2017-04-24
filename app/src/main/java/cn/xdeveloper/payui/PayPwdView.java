@@ -19,9 +19,8 @@ import android.view.inputmethod.InputConnection;
 import java.util.ArrayList;
 
 /**
- * 封装成lib，方便直接调用
- * 仿照支付宝的密码输入控件
- * Created by hua on 2016/7/24.
+ * 引用网上的一位朋友的类，具体出处找不到了
+ *
  */
 public class PayPwdView extends View {
 
@@ -155,15 +154,6 @@ public class PayPwdView extends View {
             inputMethodView.setVisibility(GONE);
         }
     }
-
-//    @Override
-//    public void onWindowFocusChanged(boolean hasWindowFocus) {
-//        super.onWindowFocusChanged(hasWindowFocus);
-//        if (!hasWindowFocus) {
-//            inputMethodView.setVisibility(GONE);
-//        }
-//    }
-
 
     @Override
     protected void onDraw(Canvas canvas) {

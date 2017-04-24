@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 /**
+ * 输入键盘
  * Created by Administrator on 2017/4/19.
  */
 

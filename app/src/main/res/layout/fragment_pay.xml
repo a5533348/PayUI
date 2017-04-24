@@ -31,12 +31,12 @@
 
             <ImageView
                 android:id="@+id/iv_close"
-                android:layout_width="30dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:src="@mipmap/icon_del"
-                android:scaleType="center"
-                android:layout_height="30dp" />
+                android:layout_marginRight="@dimen/spacing_tiny"
+                android:src="@mipmap/icon_del" />
 
         </RelativeLayout>
 
@@ -44,15 +44,15 @@
 
 
         <TextView
+            android:id="@+id/tv_content"
             style="@style/style_black_normal_text"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/text_item_height"
             android:layout_gravity="center_horizontal"
-            android:gravity="center"
-            android:text="解绑银行卡" />
+            android:gravity="center" />
 
         <cn.xdeveloper.payui.PayPwdView
-            android:id="@+id/psw_input"
+            android:id="@+id/payPwdView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/spacing_large"
@@ -62,7 +62,7 @@
 
 
     <cn.xdeveloper.payui.PwdInputMethodView
-        android:id="@+id/inputView"
+        android:id="@+id/inputMethodView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" />

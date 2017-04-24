@@ -10,12 +10,15 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 /**
- * Created by Administrator on 2017/4/20.
+ * Created by Laiyimin on 2017/4/20.
  */
 
 public class PayFragment extends DialogFragment implements View.OnClickListener {
+
+    public static final String EXTRA_CONTENT = "extra_content";    //提示框内容
 
     private PayPwdView psw_input;
     private PayPwdView.InputCallBack inputCallBack;
@@ -43,20 +46,36 @@ public class PayFragment extends DialogFragment implements View.OnClickListener 
     }
 
     private void initView(Dialog dialog) {
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            TextView tv_content = (TextView) dialog.findViewById(R.id.tv_content);
+            tv_content.setText(bundle.getString(EXTRA_CONTENT));
+        }
 
-        psw_input = (PayPwdView) dialog.findViewById(R.id.psw_input);
-        PwdInputMethodView inputMethodView = (PwdInputMethodView) dialog.findViewById(R.id.inputView);
+        psw_input = (PayPwdView) dialog.findViewById(R.id.payPwdView);
+        PwdInputMethodView inputMethodView = (PwdInputMethodView) dialog.findViewById(R.id.inputMethodView);
         psw_input.setInputMethodView(inputMethodView);
         psw_input.setInputCallBack(inputCallBack);
 
+        dialog.findViewById(R.id.iv_close).setOnClickListener(this);
     }
 
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.iv_close:
+                dismiss();
+                break;
 
+        }
     }
 
+    /**
+     * 设置输入回调
+     *
+     * @param inputCallBack
+     */
     public void setPaySuccessCallBack(PayPwdView.InputCallBack inputCallBack) {
         this.inputCallBack = inputCallBack;
     }
